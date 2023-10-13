@@ -4,7 +4,7 @@
     sd      ra, 0x0(sp)
     jal     0x001eec50
     nop
-    jal     InjectItemName
+    ;jal     InjectItemName
     nop
     ld      ra, 0x0(sp)
     jr      ra
@@ -80,6 +80,9 @@
     li          at, 0xC
     beq         s4, at, @@DoDraw
     nop
+    li          at, 0xD
+    beq         s4, at, @@DoDraw
+    nop
     sltiu       at, s4, 0x7
     beqz        at, @@CheckLoop
     nop
@@ -94,7 +97,7 @@
     dsra32      a0, a0, 0x10
 @@CheckLoop:
     addiu       s4, s4, 0x1
-    slti        v1, s4, 0xD
+    slti        v1, s4, 0xE
     addiu       s5, s5, 0x14
     addiu       s2, s2, 0x4
     addiu       s1, s1, 0x4

@@ -2,6 +2,7 @@
 .include "asm/Addresses.asm"
 .open "game/baseSLPM_658.69", "game/SLPM_658.69", 0xFFE00
     .include "asm/Inject.asm"
+    .include "asm/FOV.asm"
     .include "asm/Options/Disp_OptionMenu.asm"
     .include "asm/Options/ParamChange.asm"
     
@@ -45,6 +46,7 @@
     .include "asm/Controls/Lance/High.asm"
     .include "asm/Controls/Lance/HitWall.asm"
     .include "asm/Controls/Lance/Medium.asm"
+    .include "asm/Controls/Lance/Hop.asm"
 
     .include "asm/Controls/Gun/Basic.asm"
 
@@ -52,6 +54,8 @@
     .include "asm/Controls/DB/Combo.asm"
     .include "asm/Controls/DB/Lunge.asm"
     .include "asm/Controls/DB/Uppercut.asm"
+
+    .include "asm/Tutorial.asm"
 .close
 .open "game/baselobby.bin", "game/lobby.bin", 0x542600
     .include "asm/Quests/MakeQuestTblLocal.asm"
@@ -61,9 +65,11 @@
 .close
 .create "game/extra.bin", 0x888000
     .org 0x888000
-    .include "asm/MSG/Eng_ItemName.asm"
-    .include "asm/MSG/Eng_MeleeData.asm"
-    .include "asm/MSG/InjectItemName.asm"
+    .include "asm/Extra/SetFOV.asm"
+
+;;    .include "asm/MSG/Eng_ItemName.asm"
+;;    .include "asm/MSG/Eng_MeleeData.asm"
+;;    .include "asm/MSG/InjectItemName.asm"
 
 ;    .include "asm/Controls/DrawIcon.asm"
 
@@ -76,6 +82,8 @@
     .include "asm/Extra/GunButtons.asm"
 
     .include "asm/Extra/ButtonFuncs.asm"
+
+    .include "asm/Extra/GUI.asm"
 
     .include "asm/Controls/Camera/CameraButtons.asm"
 

@@ -24,9 +24,9 @@
 ;    addiu       s5, s5, 0x14
 
 .org 0x0011778c ; Option_MainMenu Roll Over
-    li          v0, 0xC
+    li          v0, 0xD
 .org 0x001177b8
-    li          v0, 0xC
+    li          v0, 0xD
 
 .org 0x001ee7d8 ; Option_Exit Inject
     jal         Select_TaskInject

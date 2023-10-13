@@ -70,3 +70,35 @@
     ld      ra, 0x0(sp)
     jr      ra
     addiu   sp, sp, 0x10
+
+.definelabel CheckHopActLance,.
+    addiu   sp, sp, -0x10
+    sd      ra, 0x0(sp)
+@@Do:
+    jal     GetAttackButtonLance
+    nop
+    beqz    v0, @@End
+    li      v1, 0x0
+    li      v1, 0x1
+@@End:
+    ld      ra, 0x0(sp)
+    jr      ra
+    addiu   sp, sp, 0x10
+
+.definelabel CheckHopLance,.
+    addiu   sp, sp, -0x10
+    sd      ra, 0x0(sp)
+@@Do:
+    jal     GetAttackButtonLance
+    nop
+    beqz    v0, @@End
+    li      at, 0x0
+    li      at, 0x1
+    beq     at, v0, @@End
+    nop
+    li      at, 0x2
+    beq     at, v0, @@End
+@@End:
+    ld      ra, 0x0(sp)
+    jr      ra
+    addiu   sp, sp, 0x10

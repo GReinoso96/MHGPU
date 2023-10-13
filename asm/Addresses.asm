@@ -15,6 +15,8 @@
 .definelabel CFG_ChangeCheck, 0x00117990
 .definelabel Option_SubDisp, 0x00117d00
 
+.definelabel Draw_ButtonIcon, 0x0021e860
+
 .definelabel Ran_Suu, 0x0012ae20
 
 .definelabel Quest_ClearBitCheck, 0x004c7550
@@ -34,6 +36,7 @@ OptCamera           equ 0x0035BD69
 OptScheme           equ 0x0035BD6A
 OptQuests           equ 0x0035BD6B
 OptCamSpeed         equ 0x0035BD6C
+OptFOV              equ 0x0035BD6D
 
 ; Usually at 0x0034D450
 

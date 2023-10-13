@@ -3,3 +3,9 @@
 *.txt
 *.bin
 /game/
+/bin/
+*.bat
+*.xdelta
+*.json
+*.pdb
+*.dll
